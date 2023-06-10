@@ -77,6 +77,17 @@ p {
   padding-bottom: 25px;
   padding-right: 93px;
 }
+button:focus,
+button:hover {
+  background-color: var(--brand-color-blue);
+  color: var(--white-tekst);
+  box-shadow: 0px 3px 1px var(--button-shadow-hover-first),
+    0px 1px 2px var(--button-shadow-hover-second),
+    0px 2px 2px var(--img-shadow-first);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--default-time);
+  transition-timing-function: var(--default-timing-function);
+}
 
 .web {
   color: #2196f3;
@@ -814,8 +825,7 @@ div {
 }
 
 .modal {
-  display: flex;
-  position: fixed;
+  position: absolute;
   width: 528px;
   height: 581px;
   left: 50%;
@@ -825,15 +835,16 @@ div {
   box-shadow: 0px 1px 3px var(--img-shadow-first),
     0px 1px 1px var(--img-shadow-second), 0px 2px 1px var(--img-shadow-third);
   border-radius: 4px;
-  flex-direction: row-reverse;
 }
 
 .modal-button {
-  display: flex;
+  position: absolute;
+  all: unset;
   height: 30px;
   width: 30px;
   border: none;
   background: #fff;
+  margin: 8px px 0 0 490px;
 }
 .form-style {
   display: flex;
@@ -968,4 +979,60 @@ form h3 {
   transition-property: fill;
   transition-duration: var(--default-time);
   transition-timing-function: var(--default-timing-function);
+}
+.checkbox-label {
+  margin: 20px 0 30px 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--brand-color-grey);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.checkbox-label a {
+  text-decoration: underline;
+  color: var(--brand-color-blue);
+}
+
+.checkbox-icon {
+  position: absolute;
+  fill: var(--white-tekst);
+  border-radius: 2px;
+  visibility: hidden;
+  transition-property: background-color, visibility, scale;
+  transition-duration: var(--default-time);
+  transition-timing-function: var(--default-timing-function);
+  scale: 0;
+}
+
+.checkbox-hidden:checked ~ .checkbox-icon {
+  visibility: visible;
+  background-color: var(--brand-color-blue);
+  scale: 1;
+}
+
+.checkbox-hidden:checked ~ .checkbox-icon-unchecked {
+  scale: 0;
+}
+
+.checkbox-icon-unchecked {
+  position: absolute;
+  scale: 1;
+  transition: scale, 0.2s;
+}
+
+.checkbox-text {
+  margin-left: 8px;
+}
+
+.checkbox-hidden {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  z-index: 10;
 }
