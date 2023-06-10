@@ -803,18 +803,15 @@ div {
 }
 
 .modal-backdrop {
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
-  left: 0;
-  right: 0;
   top: 0;
+  left: 0;
   bottom: 0;
-  z-index: 1;
-  cursor: not-allowed;
-  transform: scale(1);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  right: 0;
+  background-color: var(--img-shadow-third);
+  display: flex;
+  transition-property: opacity, scale, visibility;
+  transition-duration: 1s;
 }
 
 .is-hidden {
@@ -827,10 +824,10 @@ div {
 .modal {
   position: absolute;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%);
   background-color: var(--white-tekst);
   box-shadow: 0px 1px 3px var(--img-shadow-first),
     0px 1px 1px var(--img-shadow-second), 0px 2px 1px var(--img-shadow-third);
@@ -838,13 +835,9 @@ div {
 }
 
 .modal-button {
-  position: absolute;
   all: unset;
-  height: 30px;
-  width: 30px;
-  border: none;
-  background: #fff;
-  margin: 8px px 0 0 490px;
+  position: absolute;
+  margin: 8px 0 0 490px;
 }
 .form-style {
   display: flex;
