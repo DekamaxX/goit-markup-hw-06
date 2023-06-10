@@ -1,1 +1,1 @@
-https://dekamaxx.github.io/goit-markup-hw-05/
+https://dekamaxx.github.io/goit-markup-hw-06/
