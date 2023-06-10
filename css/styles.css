@@ -27,6 +27,9 @@ body {
   --default-time: 250ms;
   --default-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --img-overlay-portfolio: rgba(33, 150, 243, 0.9);
+  --newsletter-border: rgba(255, 255, 255, 0.3);
+  --form-input-border: rgba(33, 33, 33, 0.2);
+  --icons-form-color: #212121;
 }
 
 .container {
@@ -432,6 +435,78 @@ h1 {
   background-color: #2196f3;
 }
 
+.input-send {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter-input {
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid var(--newsletter-border);
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+.footer-newsletter {
+  padding-left: 72px;
+}
+
+.button-main-page {
+  background-color: var(--brand-color-blue);
+  color: var(--white-tekst);
+  font-weight: 700;
+  line-height: 1.875;
+  width: 200px;
+  padding: 10px 0;
+  margin: 0 auto;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-inscription {
+  text-transform: uppercase;
+  line-height: 1.1428em;
+  font-size: 14px;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  font-size: 16px;
+  background-color: var(--background-light);
+  font-weight: 500;
+  line-height: 1.625;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+}
+
+.form-input {
+  .form-input:focus {
+    outline: 1px solid var(--brand-color-blue);
+    transition-property: outline;
+    transition-duration: var(--default-time);
+    transition-timing-function: var(--default-timing-function);
+  }
+
+  .icon-newsletter {
+    fill: var(--white-tekst);
+    margin-left: 24px;
+  }
+
+  .form-input:focus + svg {
+    fill: var(--brand-color-blue);
+    transition-property: fill;
+    transition-duration: var(--default-time);
+    transition-timing-function: var(--default-timing-function);
+  }
+}
+
 .join-us-title {
   display: flex;
   font-weight: 700;
@@ -681,7 +756,9 @@ a.button-portfolio:active {
   justify-content: center;
   margin-bottom: 16px;
 }
-
+div {
+  display: block;
+}
 .portfolio-menu {
   display: flex;
   justify-content: center;
@@ -695,6 +772,20 @@ a.button-portfolio:active {
   justify-content: space-between;
   gap: 15px;
   margin-bottom: 94px;
+}
+
+.button-main-page {
+  background-color: var(--brand-color-blue);
+  color: var(--white-tekst);
+  font-weight: 700;
+  line-height: 1.875;
+  width: 200px;
+  padding: 10px 0;
+  margin: 0 auto;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal-backdrop {
@@ -740,4 +831,70 @@ a.button-portfolio:active {
   width: 30px;
   border: none;
   background: #fff;
+}
+
+.sign-up {
+  display: block;
+  justify-content: center;
+  gap: 12px;
+  margin-left: 78px;
+  width: 570;
+}
+
+.sign-up input[type="email"] {
+  display: flex;
+  align-items: center;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2f303a;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}
+
+.button-newsletter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  padding-left: 42px;
+}
+
+.newsletter-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sign-up-button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.sign-up-button svg {
+  fill: #fff;
+  margin-right: 28px;
+}
+.input-icon {
+  display: flex;
+  position: absolute;
+  fill: #212121;
+  margin-top: 12px;
+  margin-left: 11px;
 }
